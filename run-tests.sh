@@ -1,4 +1,12 @@
 #!/bin/bash
+# Kirtley Wienbroer
+# kirtley@osgenie.com
+
+# check if user is root
+if [ $UID != 0 ]; then
+	echo "You need root privileges"
+	exit 2
+else	
 DRIVE=$1
 for i in {1..5}
 	do
@@ -21,3 +29,4 @@ for i in {1..5}
 					done
 			done
 	done
+fi
